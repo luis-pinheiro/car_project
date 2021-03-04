@@ -8,6 +8,7 @@ import Menu_03 from '../components/Menu_03';
 import XBackground from '../components/XBackground';
 import GrayBackground from '../components/GrayBackground';
 import CarSlider from '../components/CarSlider';
+import Footer from './../components/Footer';
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
 
       <header className="h-screen bg-gray-dark">
         <Promotion text="NEW STUFF FOR YOU IN OUR STORE TODAY 25% DISCOUNT" />
+
         <div className="container grid grid-cols-3 mx-auto">
           <Menu_01 />
           <Logo />
@@ -36,10 +38,11 @@ export default function Home() {
             <Menu_03 />
           </div>
         </div>
+
+        <GrayBackground />
+        <XBackground />
+        <CarSlider />
       </header>
-      <GrayBackground />
-      <XBackground />
-      <CarSlider />
     </div>
   );
 }

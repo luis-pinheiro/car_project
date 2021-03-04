@@ -20,7 +20,7 @@ const Search = () => {
             transform="translate(1208 147)"
             fill="none"
             stroke="#292f33"
-            stroke-width="2"
+            strokeWidth="2"
           >
             <ellipse cx="7.231" cy="7.231" rx="7.231" ry="7.231" stroke="none"></ellipse>
             <ellipse cx="7.231" cy="7.231" rx="6.231" ry="6.231" fill="none"></ellipse>
@@ -33,7 +33,7 @@ const Search = () => {
             transform="translate(1219.549 158.549)"
             fill="none"
             stroke="#292f33"
-            stroke-width="2"
+            strokeWidth="2"
           ></line>
         </g>
       </svg>

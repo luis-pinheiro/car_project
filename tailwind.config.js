@@ -8,6 +8,15 @@ module.exports = {
       rotate: {
         33: '33deg',
       },
+      fontSize: {
+        '10xl': '43.5rem',
+      },
+      inset: {
+        '28pc': '28%',
+      },
+      borderWidth: {
+        10: '10px',
+      },
     },
     colors: {
       yellow: '#EEFF00',
@@ -16,12 +25,15 @@ module.exports = {
       gray: {
         light: '#E6EBEF',
         dark: '#CED6DC',
+        border: '#74787B',
       },
     },
   },
 
   variants: {
-    extend: {},
+    extend: {
+      borderWidth: ['hover', 'focus'],
+    },
   },
   plugins: [],
 };
