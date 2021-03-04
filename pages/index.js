@@ -1,5 +1,11 @@
 import Head from 'next/head';
-import Stuff from './components/Stuff';
+import Promotion from './components/Promotion';
+import Menu_01 from './components/Menu_01';
+import Logo from './components/Logo';
+import Menu_02 from './components/Menu_02';
+import Search from './components/Search';
+import Menu_03 from './components/Menu_03';
+import XBackground from './components/XBackground';
 
 export default function Home() {
   return (
@@ -7,21 +13,27 @@ export default function Home() {
       <Head>
         <title>Car Project</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
       </Head>
 
-      <main className="">
-        <Stuff />
-      </main>
-
-      <footer className="">
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by <img src="/vercel.svg" alt="Vercel Logo" className="" />
-        </a>
-      </footer>
+      <header className="h-screen bg-gray-dark">
+        <Promotion text="NEW STUFF FOR YOU IN OUR STORE TODAY 25% DISCOUNT" />
+        <div className="container grid grid-cols-3 mx-auto">
+          <Menu_01 />
+          <Logo />
+          <Menu_02 />
+        </div>
+        <div className="container grid grid-cols-3 mx-auto mt-4">
+          <div></div>
+          <div className="flex items-center">
+            <Search />
+          </div>
+          <div className="flex items-center justify-end">
+            <Menu_03 />
+          </div>
+        </div>
+      </header>
+      <XBackground />
     </div>
   );
 }
