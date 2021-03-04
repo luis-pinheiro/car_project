@@ -1,11 +1,13 @@
 import Head from 'next/head';
-import Promotion from './components/Promotion';
-import Menu_01 from './components/Menu_01';
-import Logo from './components/Logo';
-import Menu_02 from './components/Menu_02';
-import Search from './components/Search';
-import Menu_03 from './components/Menu_03';
-import XBackground from './components/XBackground';
+import Promotion from '../components/Promotion';
+import Menu_01 from '../components/Menu_01';
+import Logo from '../components/Logo';
+import Menu_02 from '../components/Menu_02';
+import Search from '../components/Search';
+import Menu_03 from '../components/Menu_03';
+import XBackground from '../components/XBackground';
+import GrayBackground from '../components/GrayBackground';
+import CarSlider from '../components/CarSlider';
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
         <title>Car Project</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
       </Head>
 
       <header className="h-screen bg-gray-dark">
@@ -33,7 +37,9 @@ export default function Home() {
           </div>
         </div>
       </header>
+      <GrayBackground />
       <XBackground />
+      <CarSlider />
     </div>
   );
 }

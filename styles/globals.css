@@ -26,6 +26,10 @@ a {
   font-family: 'oswald';
 }
 
+.roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
 .caret {
   background: url('/svg/arrow_small.svg') no-repeat;
   width: 5.52px;

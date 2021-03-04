@@ -18,7 +18,7 @@ const Menu_03 = () => {
                 transform="translate(-193.5 -482.5)"
                 fill="none"
                 stroke="#292f33"
-                stroke-width="1"
+                strokeWidth="1"
               ></path>
             </svg>
           </a>
@@ -50,7 +50,7 @@ const Menu_03 = () => {
                   fill="none"
                   stroke="#414042"
                   strokeMiterlimit="10"
-                  stroke-width="1"
+                  strokeWidth="1"
                 ></path>
                 <path
                   id="Path_2363"
@@ -60,7 +60,7 @@ const Menu_03 = () => {
                   fill="none"
                   stroke="#414042"
                   strokeMiterlimit="10"
-                  stroke-width="1"
+                  strokeWidth="1"
                 ></path>
               </g>
             </svg>
