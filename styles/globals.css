@@ -2,11 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+header::before {
+  content: 'header';
+  position: absolute;
+  @apply p-2 text-xs font-bold text-white bg-red;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  @apply text-dark;
+  @apply overflow-hidden text-dark debug-screens min-w-300px bg-gray-dark;
 }
 
 a {
@@ -37,7 +43,7 @@ a {
   height: 6.45px;
 }
 
-header {
-  background: url('/svg/cityscape.svg') no-repeat;
-  background-position-y: 27%;
+.x-bg {
+  background: url('/img/cityscape2.png') no-repeat;
+  background-position-y: 50px;
 }

@@ -3,7 +3,7 @@ const Menu_03 = () => {
     <div>
       <ul className="flex justify-end text-xs font-bold uppercase">
         <li className="">
-          <a className="" href="#">
+          <a className="hover:text-dark" href="#">
             wish
             <svg
               className="float-right ml-4"

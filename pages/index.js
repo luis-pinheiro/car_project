@@ -1,14 +1,7 @@
-import Head from 'next/head';
-import Promotion from '../components/Promotion';
-import Menu_01 from '../components/Menu_01';
-import Logo from '../components/Logo';
-import Menu_02 from '../components/Menu_02';
-import Search from '../components/Search';
-import Menu_03 from '../components/Menu_03';
 import XBackground from '../components/XBackground';
-import GrayBackground from '../components/GrayBackground';
 import CarSlider from '../components/CarSlider';
-import Footer from './../components/Footer';
+import Nav from './../components/Nav';
+import Head from 'next/head';
 
 export default function Home() {
   return (
@@ -21,28 +14,13 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
       </Head>
 
-      <header className="h-screen bg-gray-dark">
-        <Promotion text="NEW STUFF FOR YOU IN OUR STORE TODAY 25% DISCOUNT" />
+      {/* <header className="w-full border"> */}
+      <XBackground />
+      <Nav />
 
-        <div className="container grid grid-cols-3 mx-auto">
-          <Menu_01 />
-          <Logo />
-          <Menu_02 />
-        </div>
-        <div className="container grid grid-cols-3 mx-auto mt-4">
-          <div></div>
-          <div className="flex items-center">
-            <Search />
-          </div>
-          <div className="flex items-center justify-end">
-            <Menu_03 />
-          </div>
-        </div>
+      <CarSlider />
 
-        <GrayBackground />
-        <XBackground />
-        <CarSlider />
-      </header>
+      {/* </header> */}
     </div>
   );
 }

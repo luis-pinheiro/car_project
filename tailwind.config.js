@@ -17,6 +17,15 @@ module.exports = {
       borderWidth: {
         10: '10px',
       },
+      margin: {
+        '-925px': '-925px',
+      },
+      minWidth: {
+        '300px': '300px',
+      },
+      width: {
+        '250px': '250px',
+      },
     },
     colors: {
       yellow: '#EEFF00',
@@ -27,13 +36,16 @@ module.exports = {
         dark: '#CED6DC',
         border: '#74787B',
       },
+      red: 'red',
     },
   },
 
   variants: {
     extend: {
       borderWidth: ['hover', 'focus'],
+      width: ['responsive'],
+      minWidth: ['responsive'],
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-debug-screens')],
 };
