@@ -8,7 +8,8 @@ const CarSlider = () => {
   const [[page, direction], setPage] = useState([0, 0]);
   const [exitCar, setExitCar] = useState('0vw');
   const [firstSlide, setFirstSlide] = useState(true);
-  const x = useMotionValue(0);
+  const [rotateNextWheel, setRotateNextWheel] = useState(false);
+  const [rotatePrevWheel, setRotatePrevWheel] = useState(false);
 
   const imageIndex = wrap(0, images.length, page);
 
@@ -18,18 +19,26 @@ const CarSlider = () => {
 
   async function next() {
     await setExitCar('100vw');
+    await setRotateNextWheel(true);
     await paginate(1);
     if (firstSlide) {
       setFirstSlide(false);
     }
+    await setTimeout(() => {
+      setRotateNextWheel(false);
+    });
   }
 
   async function prev() {
     await setExitCar('-100vw');
+    setRotatePrevWheel(true);
     await paginate(-1);
     if (firstSlide) {
       setFirstSlide(false);
     }
+    await setTimeout(() => {
+      setRotatePrevWheel(false);
+    });
   }
 
   const carSliderVariants = {
@@ -41,7 +50,8 @@ const CarSlider = () => {
       transition: {
         type: 'tween',
         duration: 2,
-        when: 'beforeChildren',
+        when: 'afterChildren',
+        staggerChildren: 0.1,
       },
     },
     exit: {
@@ -85,20 +95,16 @@ const CarSlider = () => {
     <div className="container relative mx-auto car-slider">
       <AnimatePresence initial={false} custom={direction} exitBeforeEnter>
         <motion.div key={page} initial="initial" animate="animate" exit="exit" variants={carSliderVariants}>
-          <div className="relative mx-auto " style={{ height: '731px' }}>
+          <div className="relative mx-auto h-731px " style={{}}>
             <AnimatePresence custom={direction} exitBeforeEnter>
               <img src={images[imageIndex]} className="mx-auto " />
 
               <motion.img
                 key="front-wheel"
-                className="absolute front-wheel "
+                className="absolute front-wheel xl:right-293px 2xl:right-421px w-161px -mt-247px"
                 src="./img/car/Wheel.png"
                 alt="Front Wheel"
-                style={{
-                  marginTop: '-247px',
-                  right: '421px',
-                  width: '161px',
-                }}
+                style={{}}
                 custom={direction}
                 animate="animate"
                 exit="exit"
@@ -107,14 +113,10 @@ const CarSlider = () => {
 
               <motion.img
                 key="rear-wheel"
-                className="absolute rear-wheel "
+                className="absolute rear-wheel -mt-247px w-161px xl:right-819px 2xl:right-947px"
                 src="./img/car/Wheel.png"
                 alt="Rear Wheel"
-                style={{
-                  marginTop: '-247px',
-                  right: '947px',
-                  width: '161px',
-                }}
+                style={{}}
                 animate="animate"
                 exit="exit"
                 variants={wheelsVariants}
@@ -141,27 +143,31 @@ const CarSlider = () => {
             exit={{
               scale: 0,
             }}
-            className="absolute w-5 h-5 text-xs font-bold text-white rounded-full xl:w-20 xl:h-20 left border-opacity-60 oswald bg-dark border-yellow border-10"
-            style={{
-              top: '40%',
-              right: '50%',
-              bottom: '50%',
-              left: '50%',
-            }}
+            className="absolute w-5 h-5 text-xs font-bold text-white rounded-full hover:scale-125 xl:w-20 xl:h-20 left border-opacity-60 oswald bg-dark border-yellow border-10 top-40% right-50% bottom-50% left-50%"
+            style={
+              {
+                // top: '40%',
+                // right: '50%',
+                // bottom: '50%',
+                // left: '50%',
+              }
+            }
           >
             BUY NOW
           </motion.button>
         </motion.div>
       </AnimatePresence>
-      <div className="container relative grid grid-cols-3 mx-auto slider-nav" style={{ marginTop: '-200px' }}>
+      <div className="container relative grid grid-cols-3 mx-auto slider-nav -mt-200px" style={{}}>
         <div className="flex items-center justify-end pr-20">
           {/* Left Button */}
-          <motion.button
-            onClick={() => prev()}
-            className="flex items-center justify-center w-8 h-8 border rounded-full hover:border-0 hover:bg-yellow border-gray-border"
-          >
-            <i className="fas text-dark fa-caret-left"></i>
-          </motion.button>
+          {page > 1 && (
+            <motion.button
+              onClick={() => prev()}
+              className="flex items-center justify-center w-8 h-8 border rounded-full hover:border-0 hover:bg-yellow border-gray-border"
+            >
+              <i className="fas text-dark fa-caret-left"></i>
+            </motion.button>
+          )}
         </div>
         <div className="">
           <p className="text-xs font-bold text-center oswald">LICENSED CAR</p>
@@ -187,15 +193,17 @@ const CarSlider = () => {
         </div>
         <div className="flex items-center justify-start pl-20">
           {/* Right Button */}
-          <motion.button
-            onClick={() => next()}
-            className="flex items-center justify-center w-8 h-8 border rounded-full hover:border-0 hover:bg-yellow border-gray-border"
-          >
-            <i className="fas text-dark fa-caret-right"></i>
-          </motion.button>
+          {page < images.length && (
+            <motion.button
+              onClick={() => next()}
+              className="flex items-center justify-center w-8 h-8 border rounded-full hover:border-0 hover:bg-yellow border-gray-border"
+            >
+              <i className="fas text-dark fa-caret-right"></i>
+            </motion.button>
+          )}
         </div>
       </div>
-      <Footer />
+      <Footer index={page} total={images.length} />
     </div>
   );
 };

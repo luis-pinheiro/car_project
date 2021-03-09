@@ -2,6 +2,7 @@ import XBackground from '../components/XBackground';
 import CarSlider from '../components/CarSlider';
 import Nav from './../components/Nav';
 import Head from 'next/head';
+import { Sidebar } from '../components/sidebar/Sidebar';
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Nav />
 
       <CarSlider />
+      <Sidebar />
 
       {/* </header> */}
     </div>

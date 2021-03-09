@@ -17,13 +17,29 @@ module.exports = {
       borderWidth: {
         10: '10px',
       },
+      height: {
+        '731px': '731px',
+      },
+      inset: {
+        '421px': '421px',
+        '947px': '947px',
+        '40%': '40%',
+        '50%': '50%',
+        '293px': '293px',
+        '819px': '819px',
+        '64px': '64px',
+      },
       margin: {
         '-925px': '-925px',
+        '-200px': '-200px',
+        '-247px': '-247px',
+        '-1100px': '-1100px',
       },
       minWidth: {
         '300px': '300px',
       },
       width: {
+        '161px': '161px',
         '250px': '250px',
       },
     },
@@ -43,6 +59,8 @@ module.exports = {
   variants: {
     extend: {
       borderWidth: ['hover', 'focus'],
+      height: ['responsive'],
+      inset: ['responsive'],
       width: ['responsive'],
       minWidth: ['responsive'],
     },

@@ -1,7 +1,7 @@
 const Menu_02 = () => {
   return (
-    <div className="">
-      <nav className="right-0 z-50 font-bold uppercase  oswald">
+    <div className="invisible sm:visible">
+      <nav className="right-0 z-50 font-bold uppercase oswald">
         <ul className="flex items-center justify-end mt-10 text-xs">
           <li className="px-6">
             <a href="#">b2b</a>

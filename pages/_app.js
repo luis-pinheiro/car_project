@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import { useRouter } from 'next/router';
 import Promotion from './../components/Promotion';
+// import './../components/sidebar/styles.css';
 
 function handleExitComplete() {
   if (typeof window !== 'undefined') {

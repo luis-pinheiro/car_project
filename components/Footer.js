@@ -1,4 +1,4 @@
-const Footer = () => {
+const Footer = ({ index, total }) => {
   return (
     <div className="container grid grid-cols-3 mx-auto mt-4">
       <div className="flex items-center ">
@@ -89,7 +89,8 @@ const Footer = () => {
       </div>
       <div className="flex justify-end ">
         <p className="font-bold text-9xl oswald -mt-14">
-          01<span className="text-xs align-top">/03</span>
+          {index}
+          <span className="text-xs align-top">/{total}</span>
         </p>
       </div>
     </div>

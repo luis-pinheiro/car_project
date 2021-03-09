@@ -1,6 +1,6 @@
 const Menu_03 = () => {
   return (
-    <div>
+    <div className="invisible sm:visible">
       <ul className="flex justify-end text-xs font-bold uppercase">
         <li className="">
           <a className="hover:text-dark" href="#">

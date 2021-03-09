@@ -6,7 +6,7 @@ import Menu_03 from '../components/Menu_03';
 
 const Nav = () => {
   return (
-    <div className="relative nav" style={{ marginTop: '-1100px' }}>
+    <div className="relative px-5 nav -mt-1100px" style={{}}>
       <div className="container grid grid-cols-3 mx-auto">
         <Menu_01 />
         <Logo />

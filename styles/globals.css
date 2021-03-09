@@ -8,6 +8,24 @@ header::before {
   @apply p-2 text-xs font-bold text-white bg-red;
 }
 
+.wheel-rotate-next {
+  animation: spin 2s linear;
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.wheel-rotate-prev {
+  animation: spin 2s linear;
+  @keyframes spin {
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+}
+
 html,
 body {
   padding: 0;
