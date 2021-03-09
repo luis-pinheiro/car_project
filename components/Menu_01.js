@@ -5,7 +5,7 @@ const Menu_01 = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <div className="relative invisible text-xs border sm:visible">
+    <div className="relative invisible text-xs border md:visible">
       <button
         className="py-3 mt-10 ml-16 mr-1 font-bold uppercase border lg:pl-5 xl:pl-10 hover:text-white rounded-l-md border-dark hover:bg-dark"
         onClick={() => setToggle(!toggle)}

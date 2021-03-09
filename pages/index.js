@@ -20,7 +20,7 @@ export default function Home() {
       <Nav />
 
       <CarSlider />
-      <Sidebar />
+      {/* <Sidebar /> */}
 
       {/* </header> */}
     </div>

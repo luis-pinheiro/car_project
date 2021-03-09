@@ -6,19 +6,21 @@ import Menu_03 from '../components/Menu_03';
 
 const Nav = () => {
   return (
-    <div className="relative px-5 nav -mt-1100px" style={{}}>
-      <div className="container grid grid-cols-3 mx-auto">
-        <Menu_01 />
-        <Logo />
-        <Menu_02 />
-      </div>
-      <div className="container grid grid-cols-3 mx-auto mt-4">
-        <div></div>
-        <div className="flex items-center">
-          <Search />
+    <div className="relative px-5 mx-auto nav " style={{}}>
+      <div className="">
+        <div className="container grid grid-cols-3 mx-auto">
+          <Menu_01 />
+          <Logo />
+          <Menu_02 />
         </div>
-        <div className="flex items-center justify-end">
-          <Menu_03 />
+        <div className="container grid w-3/4 mx-auto mt-4 md:w-full md:grid-cols-3">
+          <div></div>
+          <div className="flex items-center w-3/4 mx-auto -mt-12 sm:mt-0 sm:w-full">
+            <Search />
+          </div>
+          <div className="flex items-center justify-end">
+            <Menu_03 />
+          </div>
         </div>
       </div>
     </div>

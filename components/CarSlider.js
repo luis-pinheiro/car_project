@@ -95,13 +95,14 @@ const CarSlider = () => {
     <div className="container relative mx-auto car-slider">
       <AnimatePresence initial={false} custom={direction} exitBeforeEnter>
         <motion.div key={page} initial="initial" animate="animate" exit="exit" variants={carSliderVariants}>
-          <div className="relative mx-auto h-731px " style={{}}>
+          {/* h-731px */}
+          <div className="relative mx-auto " style={{}}>
             <AnimatePresence custom={direction} exitBeforeEnter>
               <img src={images[imageIndex]} className="mx-auto " />
-
+              {/*  w-63px -mt-94px right-96px */}
               <motion.img
                 key="front-wheel"
-                className="absolute front-wheel xl:right-293px 2xl:right-421px w-161px -mt-247px"
+                className="absolute front-wheel lg:right-219px lg:-mt-209px lg:w-137px xl:right-293px 2xl:right-421px xl:w-161px xl:-mt-247px md:right-162px md:w-107px md:-mt-158px sm:-mt-132px sm:w-87px sm:right-135px -mt-21% right-21% w-14%"
                 src="./img/car/Wheel.png"
                 alt="Front Wheel"
                 style={{}}
@@ -110,10 +111,10 @@ const CarSlider = () => {
                 exit="exit"
                 variants={wheelsVariants}
               />
-
+              {/*  w-63px -mt-94px right-293px */}
               <motion.img
                 key="rear-wheel"
-                className="absolute rear-wheel -mt-247px w-161px xl:right-819px 2xl:right-947px"
+                className="absolute lg:right-663px lg:-mt-209px lg:w-137px rear-wheel xl:-mt-247px xl:w-161px xl:right-819px 2xl:right-947px md:right-495px md:w-107px md:-mt-158px sm:-mt-132px sm:w-87px sm:right-414px -mt-21% w-14% right-64%"
                 src="./img/car/Wheel.png"
                 alt="Rear Wheel"
                 style={{}}
@@ -143,7 +144,7 @@ const CarSlider = () => {
             exit={{
               scale: 0,
             }}
-            className="absolute w-5 h-5 text-xs font-bold text-white rounded-full hover:scale-125 xl:w-20 xl:h-20 left border-opacity-60 oswald bg-dark border-yellow border-10 top-40% right-50% bottom-50% left-50%"
+            className="absolute btn-buy sm:text-xs text-xxs font-bold text-white h-14 w-14 rounded-full sm:w-20 sm:h-20 left border-opacity-60 oswald bg-dark border-yellow border-10 top-1/2 left-45% xl:top-40% xl:right-50% bottom-50%"
             style={
               {
                 // top: '40%',
@@ -157,8 +158,8 @@ const CarSlider = () => {
           </motion.button>
         </motion.div>
       </AnimatePresence>
-      <div className="container relative grid grid-cols-3 mx-auto slider-nav -mt-200px" style={{}}>
-        <div className="flex items-center justify-end pr-20">
+      <div className="container absolute grid grid-cols-3 mx-auto slider-nav " style={{}}>
+        <div className="flex items-start justify-end pr-20 sm:items-center">
           {/* Left Button */}
           {page > 1 && (
             <motion.button
@@ -171,7 +172,7 @@ const CarSlider = () => {
         </div>
         <div className="">
           <p className="text-xs font-bold text-center oswald">LICENSED CAR</p>
-          <h1 className="text-4xl font-bold text-center oswald">Ultra-cool Motherfucker</h1>
+          <h1 className="text-2xl font-bold text-center sm:text-4xl oswald">Ultra-cool Motherfucker</h1>
           <p className="text-sm text-center roboto">Battery-powered Ride-on Car</p>
           <ul className="flex justify-center space-x-4">
             <li>
@@ -191,7 +192,7 @@ const CarSlider = () => {
             </li>
           </ul>
         </div>
-        <div className="flex items-center justify-start pl-20">
+        <div className="flex items-start justify-start pl-20 sm:items-center">
           {/* Right Button */}
           {page < images.length && (
             <motion.button

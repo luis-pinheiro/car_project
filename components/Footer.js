@@ -1,8 +1,8 @@
 const Footer = ({ index, total }) => {
   return (
-    <div className="container grid grid-cols-3 mx-auto mt-4">
+    <div className="container relative grid grid-cols-3 mx-auto mt-4 footer xl:top-32 sm:top-40 top-44">
       <div className="flex items-center ">
-        <ul className="flex space-x-4">
+        <ul className="flex space-x-1 sm:space-x-4">
           <li>
             <a
               className="flex items-center justify-center w-8 h-8 border rounded-full hover:bg-yellow hover:border-0 border-dark"
@@ -88,7 +88,7 @@ const Footer = ({ index, total }) => {
         <p className="text-xs font-bold text-center oswald">PAYMENT BY COD, INTERNET BANKING OR CARD</p>
       </div>
       <div className="flex justify-end ">
-        <p className="font-bold text-9xl oswald -mt-14">
+        <p className="text-6xl font-bold sm:text-9xl oswald -mt-7 sm:-mt-14">
           {index}
           <span className="text-xs align-top">/{total}</span>
         </p>

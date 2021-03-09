@@ -30,7 +30,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  @apply overflow-hidden text-dark debug-screens min-w-300px bg-gray-dark;
+  @apply text-dark debug-screens min-w-300px bg-gray-dark;
+  overflow-x: clip;
 }
 
 a {
@@ -63,5 +64,21 @@ a {
 
 .x-bg {
   background: url('/img/cityscape2.png') no-repeat;
-  background-position-y: 50px;
+  background-position-y: 10%;
 }
+
+@media (min-width: 640px) {
+  .x-bg {
+    background-position-y: 5%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .x-bg {
+    background-position-y: 0%;
+  }
+}
+
+/* .btn-buy {
+  @apply transform scale-50 sm:scale-75 md:scale-100 !important;
+} */

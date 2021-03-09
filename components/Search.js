@@ -4,7 +4,7 @@ const Search = () => {
       <input
         type="text"
         placeholder="Search _"
-        className="w-full px-6 py-4 text-xs font-bold uppercase border rounded-full bg-gray-light border-dark oswald placeholder-dark text-dark"
+        className="w-full px-6 py-4 text-xs font-bold uppercase border rounded-full bg-gray-light border-dark oswald placeholder-dark text-dark focus:outline-none"
       />
       <a href="#">
         <svg
