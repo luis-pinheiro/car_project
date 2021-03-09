@@ -31,7 +31,7 @@ body {
   padding: 0;
   margin: 0;
   @apply text-dark debug-screens min-w-300px bg-gray-dark;
-  overflow-x: clip;
+  /* overflow-x: clip; */
 }
 
 a {

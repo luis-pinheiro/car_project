@@ -92,7 +92,7 @@ const CarSlider = () => {
   };
 
   return (
-    <div className="container relative mx-auto car-slider">
+    <div className="container relative mx-auto overflow-x-hidden car-slider">
       <AnimatePresence initial={false} custom={direction} exitBeforeEnter>
         <motion.div key={page} initial="initial" animate="animate" exit="exit" variants={carSliderVariants}>
           {/* h-731px */}
@@ -161,7 +161,7 @@ const CarSlider = () => {
       <div className="container absolute grid grid-cols-3 mx-auto slider-nav " style={{}}>
         <div className="flex items-start justify-end pr-20 sm:items-center">
           {/* Left Button */}
-          {page > 1 && (
+          {page > 0 && (
             <motion.button
               onClick={() => prev()}
               className="flex items-center justify-center w-8 h-8 border rounded-full hover:border-0 hover:bg-yellow border-gray-border"
